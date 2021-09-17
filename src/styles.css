@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+.small-flag{
+    width:50px;
+}
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../paises.jpg);
+    color:#fff;
+    background-size:cover;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

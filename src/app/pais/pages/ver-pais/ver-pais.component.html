@@ -1,0 +1,61 @@
+<div *ngIf="!pais; else divPais" 
+    class="alert alert-info">
+    Espere por favor...
+</div>
+
+
+<ng-template #divPais>
+    <div class="row">
+        <div class="col-12">
+            <h1>
+                Pais: <small>{{pais.name}}</small>
+            </h1>
+    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <img [src]="pais.flag" alt="" class="img-thumbnail">
+        </div>
+        <div class="col">
+            <h3>Informacion</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Capital:</strong> {{pais.capital | titlecase}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Nombre completo:</strong> {{pais.altSpellings[2] | titlecase}}
+                </li>
+                
+                <li class="list-group-item">
+                    <strong>Region:</strong> {{pais.region | titlecase}}
+                </li>
+
+                <li class="list-group-item">
+                    <strong>Sub-Region:</strong> {{pais.subregion | titlecase}}
+                </li>
+
+                <li class="list-group-item">
+                    <strong>Población:</strong> {{pais.population | number}} de Habitantes
+                </li>
+
+                <li class="list-group-item">
+                    <strong>Area</strong> {{pais.area | number}}m<sup>2</sup>
+                </li>
+
+                <li class="list-group-item">
+                    <strong>Zona Horaria:</strong> {{pais.timezones[0]}} 
+                </li>
+                <li class="list-group-item">
+                    <strong>Moneda:</strong> {{pais.currencies[0].name}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Lenguaje:</strong> {{pais.languages[0].name}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</ng-template>
+
+
